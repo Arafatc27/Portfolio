@@ -1,0 +1,23 @@
+.about-me {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+  flex-wrap: wrap; /* for responsiveness */
+}
+
+.profile {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-top: 10%;
+}
+
+.text {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-top: 10%;
+}
