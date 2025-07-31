@@ -16,15 +16,9 @@ return(
             <li>
                 <Link to="/">Home</Link>
             </li>
-            {/* <li>
-                <Link to="/aboutme">About me</Link>
-            </li> */}
             <li>
                 <Link to="/projects">Projects</Link>
             </li>
-            {/* <li>
-                <a href="/resume">Resume</a>
-            </li> */}
             <li>
                 <Link to="/contact">Contacts</Link>
             </li>
