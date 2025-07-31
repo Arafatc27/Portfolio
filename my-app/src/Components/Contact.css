@@ -1,0 +1,121 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Prevents scrollbar on the page */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 0 12rem 0;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Two-column card */
+.contact-card {
+  display: grid;
+  grid-template-columns: 350px 350px;;
+  max-width: 700px;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden; /* keep image + panel clipped */
+  box-shadow: 0 4px 24px rgba(0,0,0,.35);
+  background: transparent; /* right side panel supplies white */
+}
+
+/* Image side */
+.contact-photo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #000; /* fallback while image loads */
+}
+.contact-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills column like screenshot */
+}
+
+/* Form panel */
+.contact-form {
+  background: #ffffff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* vertical rhythm between controls */
+} 
+
+.contact-form h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #000;
+}
+
+/* Labels above inputs */
+.field-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #000;
+  line-height: 1.2;
+}
+
+/* Underline‑only inputs */
+.field-input {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.25rem 0;
+  border: none;
+  border-bottom: 2px solid #000;
+  background: transparent;
+  color: #000;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+.field-input::placeholder {
+  color: #999;
+  font-weight: 400;
+}
+.field-input:focus {
+  border-bottom-color: #0070f3; /* accent on focus */
+}
+
+/* Submit button */
+.contact-submit {
+  margin-top: 1.75rem;
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+.contact-submit:hover,
+.contact-submit:focus-visible {
+  opacity: 0.85;
+}
+
+/* Responsive: stack on narrow screens */
+@media (max-width: 640px) {
+  .contact-card {
+    grid-template-columns: 1fr;
+  }
+  .contact-form {
+    padding: 2rem 1.5rem 2.5rem;
+  }
+}

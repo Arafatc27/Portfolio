@@ -1,0 +1,60 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #111111;
+  font-family: sans-serif;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111111;
+  padding: 1rem 2rem; /* Responsive padding */
+  width: 90%;
+  max-width: 40rem; /* About 960px, but in rem */
+  margin: 3rem auto; /* Centered with space above */
+  border-radius: 2rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(255, 255, 255, 0.1),
+              0 0 0.625rem rgba(255, 255, 255, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Left side (Name) */
+.navbar-left {
+  flex: 1;
+}
+
+.navbar-left .name {
+  font-size: 1.125rem; /* 18px */
+  font-weight: bold;
+  color: white;
+}
+
+/* Right side (Links) */
+.navbar-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar-right .nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-right .nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.875rem; /* 14px */
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar-right .nav-links li a:hover {
+  color: #555;
+}
