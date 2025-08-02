@@ -9,3 +9,11 @@ padding: 1rem;
 margin-top: 10%;
 color: white;
 }
+
+@media (max-width: 768px) {
+  .intro p {
+    font-size: 1rem;
+    margin-top: 30%;
+    padding: 1rem 0.5rem;
+  }
+}
