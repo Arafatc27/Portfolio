@@ -1,7 +1,8 @@
+/* Base */
 body, html {
   margin: 0;
   padding: 0;
-  background-color: #111111;
+  background-color: #111;
   font-family: sans-serif;
 }
 
@@ -10,36 +11,20 @@ body, html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #111111;
-  padding: 1rem 2rem; /* Responsive padding */
-  width: 90%;
-  max-width: 40rem; /* About 960px, but in rem */
-  margin: 3rem auto; /* Centered with space above */
-  border-radius: 2rem;
-  box-shadow: 0 0.25rem 0.75rem rgba(255, 255, 255, 0.1),
-              0 0 0.625rem rgba(255, 255, 255, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: #111;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid white;
 }
 
-/* Left side (Name) */
-.navbar-left {
-  flex: 1;
-}
-
-.navbar-left .name {
-  font-size: 1.125rem; /* 18px */
-  font-weight: bold;
+/* Name section */
+.name {
   color: white;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
-/* Right side (Links) */
-.navbar-right {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.navbar-right .nav-links {
+/* Desktop nav links */
+.nav-links {
   display: flex;
   list-style: none;
   gap: 1.5rem;
@@ -47,14 +32,78 @@ body, html {
   padding: 0;
 }
 
-.navbar-right .nav-links li a {
+.nav-links li a {
   text-decoration: none;
   color: white;
-  font-size: 0.875rem; /* 14px */
+  font-size: 1rem;
   font-weight: 500;
-  transition: color 0.2s ease;
 }
 
-.navbar-right .nav-links li a:hover {
-  color: #555;
+.nav-links li a:hover {
+  color: #888;
+}
+
+/* Hamburger icon (hidden on desktop) */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile full-screen menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  z-index: 1000;
+}
+
+/* Close icon */
+.close-icon {
+  align-self: flex-end;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile links */
+.mobile-nav-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.mobile-nav-links li {
+  margin-bottom: 1.5rem;
+}
+
+.mobile-nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+/* Responsive behavior */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide desktop links */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger */
+  }
+  /* Active underline for mobile menu */
+.active-mobile-link {
+  border-bottom: 2px solid white;
+  width: fit-content;
+}
+
 }

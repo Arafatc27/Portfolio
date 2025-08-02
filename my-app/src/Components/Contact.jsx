@@ -10,7 +10,6 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", { name, email, phone });
-    // TODO: send to backend / email service
   };
 
   return (
