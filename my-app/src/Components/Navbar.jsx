@@ -36,16 +36,35 @@ const Navbar = () => {
                         &times;
                     </div>
                     <ul className="mobile-nav-links">
-                        <li className={isActive("/") ? "active-mobile-link" : ""}>
-                            <Link to="/" onClick={closeMenu}>Home</Link>
+                        <li>
+                            <Link
+                                to="/"
+                                onClick={closeMenu}
+                                className={location.pathname === "/" ? "active-mobile-link" : ""}
+                            >
+                                Home
+                            </Link>
                         </li>
-                        <li className={isActive("/projects") ? "active-mobile-link" : ""}>
-                            <Link to="/projects" onClick={closeMenu}>Projects</Link>
+                        <li>
+                            <Link
+                                to="/projects"
+                                onClick={closeMenu}
+                                className={location.pathname === "/projects" ? "active-mobile-link" : ""}
+                            >
+                                Projects
+                            </Link>
                         </li>
-                        <li className={isActive("/contact") ? "active-mobile-link" : ""}>
-                            <Link to="/contact" onClick={closeMenu}>Contacts</Link>
+                        <li>
+                            <Link
+                                to="/contact"
+                                onClick={closeMenu}
+                                className={location.pathname === "/contact" ? "active-mobile-link" : ""}
+                            >
+                                Contacts
+                            </Link>
                         </li>
                     </ul>
+
                 </div>
             )}
         </>
